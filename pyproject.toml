@@ -10,7 +10,23 @@ python = "^3.12"
 aiogram = "^3.18.0"
 python-dotenv = "^1.0.1"
 sqlalchemy = "^2.0.38"
+sqlmodel = "^0.0.22"
+alembic = "^1.14.1"
 
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.15.0"
+pre-commit = "^4.1.0"
+ruff = "^0.9.6"
+
+[tool.mypy]
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true
+strict = true
+
+[tool.roof]
+ignore = ["F821"]
 
 [build-system]
 requires = ["poetry-core"]
